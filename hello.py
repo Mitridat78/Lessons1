@@ -10,6 +10,6 @@ except ValueError:
     print("Помилка!!!")
     sys.exit(1)
 
-print(f"Min: {minute % 60} Hour: {minute // 60}")
+print(f"Min: {minute % 60} Hour: {minute % 1440 // 60}") # 1440 це кількість хвилин за добу = 24 * 60 (24 години * 60 хвилин)
 #print(f"Залишилось: {number2 % number1}")
 #print(f"Result: {number1 + number2}")
