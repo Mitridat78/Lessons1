@@ -10,6 +10,9 @@ if number1 % 2 > 0:
     hour = ((number1 * 45) + (number1 // 2) * 5 + (number1 // 2) * 15) // 60
     minute = ((number1 * 45) + (number1 // 2) * 5 + (number1 // 2) * 15) % 60
     print(f"Hour: {9 + hour} Minute: {minute}")
-#else:
-#    print(f"чет {(number1 * 45) + }")
+else:
+    hour = ((number1 * 45) + (number1 // 2) * 5 + ((number1 - 2) // 2) * 15) // 60
+    minute = ((number1 * 45) + (number1 // 2) * 5 + ((number1 - 2) // 2) * 15) % 60
+    print(f"Hour: {9 + hour} Minute: {minute}")
+
 
