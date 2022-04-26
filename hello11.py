@@ -6,7 +6,7 @@ if a <= b:
     for i in range(a, b+1):
         print(i)
 else:
-    print("Помилка! a має бути <= b!")
+    print("Помилка! a має бути <= b !")
 
 
 
