@@ -4,3 +4,4 @@
 """
 s = str(input("Input string: "))
 print(f"Кількість пробілів: {s.count(' ')}")
+print(f"Кількість слів: {s.count(' ')+1}")
