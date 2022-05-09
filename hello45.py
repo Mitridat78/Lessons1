@@ -5,4 +5,12 @@
 """
 
 a = [int(input(f"Введіть {i} елемент списку: ")) for i in range(int(input("Введіть кількість елементів списку: ")))]
+max1 = a[0] # першій спосіб - самопісний
+j = 0
+for i in range(len(a)):
+    if a[i] > max1:
+        max1 = a[i]
+        j = i
+print(max1, j, sep= ', ')
+#другий спосіб - з використанням стандартних методів пайтона
 print(max(a), a.index(max(a)), sep = ', ') 
