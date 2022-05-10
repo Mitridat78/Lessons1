@@ -16,9 +16,7 @@ c = int(input("c = "))
 a.append(c)
 print(a, sep = ', ')
 
-for i in range(k, len(a)):
-    if i == k:
-        a[i], a[i+1] = c, a[i]
-#        a[len(a)] = a[len(a)-1]
-    
+for i in range(len(a) - 1, k, -1):
+    a[i] = a[i - 1]
+a[k] = c
 print(a, sep = ', ')
