@@ -8,18 +8,36 @@
 
 Программа получает на вход размеры массива n и m, затем n строк по m чисел в каждой.
 """
-from re import I
-
 
 n = int(input("Введіть кількість строк (n): "))
 #m = int(input("Введіть кількість стовбців (m): "))
 a = [[int(j) for j in input().split()] for i in range(n)]
 
 max1 = a[0][0]
+max = a[0][0]
+count = 0
+j2 = 1
+# перший спосіб - перебор по індексах
 for i in range(n):
     for j in range(len(a[i])):
-        if a[i][j] >= max1:
+        if a[i][j] > max1:
             max1 = a[i][j]
             i1, j1 = i, j
+            count += 1 # лічильник на той випадок якщо максимальний елемент перший в масиві
+if count == 0: #якщо лічильник дорівнює 0, то значить максимальний елемент перший в масиві
+    max1 = a[0][0]
+    i1, j1 = 0, 0
         
-print(f"Max = {max1}", f"String = {i1}", f"Row = {j1}", sep=', ')
+print(f"Max = {max1}", f"Line = {i1 + 1}", f"Column = {j1 + 1}", sep=', ')
+
+#другий спосіб - перебор по елементах
+for line in a:
+    for elem in line:
+        if elem > max:
+            max = elem
+            ind2 = line.index(elem) + 1
+            ind1 = j2
+    j2 += 1
+     
+print(f"Max = {max}", f"Line = {ind1}", f"Column = {ind2}", sep=', ')
+
