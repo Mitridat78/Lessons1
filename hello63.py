@@ -15,7 +15,7 @@ for i in range(n):
     for j in range(len(a[i])):
         if i == j:
             a[i][j] = i - j
-        if i - j or j - i == i - j:
+        if abs(i - j) == abs(i-j):
             a[i][j] = abs(i - j)
     
 for line in a:
