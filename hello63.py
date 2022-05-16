@@ -9,13 +9,13 @@
 n = int(input("Введіть кількість строк (n): "))
 #m = int(input("Введіть кількість стовбців (m): "))
 a = [[0] * n for i in range(n)]
-k = 0
+#k = 0
 
 for i in range(n):
     for j in range(len(a[i])):
         if i == j:
-            a[i][j] = k
-        if j == i-j or i == j - i:
+            a[i][j] = i - j
+        if i - j or j - i == i - j:
             a[i][j] = abs(i - j)
     
 for line in a:
