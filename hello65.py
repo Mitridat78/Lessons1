@@ -7,22 +7,18 @@
 """
 
 def swap_columns(a, i, j):
-    for i in range(n):
-        for j in range(m):
-            if j == column1:
-                a[i][column1], a[i][column2] = a[i][column2], a[i][column1]
+    for k in range(n):
+        for k1 in range(m):
+            if k1 == i:
+                a[k][i], a[k][j] = a[k][j], a[k][i]
 
 
 n = int(input("Введіть кількість строк (n): "))
 m = int(input("Введіть кількість стовбців (m): "))
-a = [[int(j) for j in input().split()] for i in range(n)]
-column1 = int(input())
-column2 = int(input())
-"""
-for i in range(n):
-    for j in range(m):
-        if j == column1:
-            a[i][column1], a[i][column2] = a[i][column2], a[i][column1]
-"""
+a = [[int(k1) for k1 in input().split()] for k in range(n)]
+i = int(input())
+j = int(input())
+
+swap_columns(a, i, j)
 for line in a:
     print(' '.join(str(elem) for elem in line))
