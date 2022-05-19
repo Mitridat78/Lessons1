@@ -4,12 +4,5 @@
 
 Примечание. И даже эту задачу на Питоне можно решить в одну строчку.
 """
-# покроково - для розуміння що відбувається
-"""
-a = {int(i) for i in input().split()} #вводимо множини
-b = {int(i) for i in input().split()}
-
-print(a&b)
-"""
-print(set(input().split()) & set(input().split()))
+print(' '.join(sorted(set(input().split()) & set(input().split()))))
 
