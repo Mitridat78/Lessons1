@@ -14,7 +14,7 @@ for elem in str:
     else:
         a[elem] += 1
     print(a[elem], end=" ")
-print(a)
+
 # другий варіант
 """for i in str:
     a[i] = a.get(i, 0) + 1
