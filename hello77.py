@@ -17,5 +17,3 @@ for i in range(m):
     for elem in a:
         if city in a[elem]:
             print(elem)
-
-
